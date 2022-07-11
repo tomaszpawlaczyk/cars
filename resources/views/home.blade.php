@@ -9,6 +9,9 @@
 <body>
     <div class="container">
         <h1>home</h1>
+        <ul>
+            <li><a href="{{route('cars.list')}}">samochody</a></li>
+        </ul>
     </div>
 </body>
 </html>

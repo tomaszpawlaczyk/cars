@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Faker\Factory;
 
 
-class ModelsSeeder extends Seeder
+class BrandsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,12 +18,12 @@ class ModelsSeeder extends Seeder
      */
     public function run()
     {
-        $data=[];
-        $faker=Factory::create();
+        $data = [];
+        $faker = Factory::create();
         $faker->addProvider(new \Faker\Provider\Fakecar($faker));
-        for($i=0;$i<20;$i++){
-            $data[]=["name"=> $faker->vehicleModel];
+        for($i=0;$i<10;$i++){
+            $data[]=["name"=>$faker->vehicleBrand];
         }
-        DB::table("models")->insert($data);
+        DB::table("brands")->insert($data);
     }
 }

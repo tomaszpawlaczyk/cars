@@ -23,7 +23,7 @@ class CarsSeeder extends Seeder
         $faker=Factory::create();
         $data=[];
         for($i=0;$i<30;$i++){
-            $data[]=["vin"=> $faker->numberBetween(10,20),"description"=> $faker->text,"color"=>$faker->colorName(),"price"=>$faker->randomNumber,"brand_id"=>null, "model_id"=> $faker->numberBetween(1,10)];
+            $data[]=["vin"=> $faker->numberBetween(100,1000),"description"=> $faker->text,"color"=>$faker->colorName(),"price"=>$faker->numberBetween(1000,10000),"brand_id"=>$faker->numberBetween(1,10), "model_id"=> $faker->numberBetween(1,20)];
         }
         DB::table("cars")->insert($data);
     }
